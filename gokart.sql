@@ -69,18 +69,62 @@ CREATE TABLE Race_Result
 -- Sample drivers:
 INSERT INTO Driver (driver_id, fname, lname, rating)
 VALUES
-    (55, 'Carlos', 'Sainz', 2000)
-    (44, 'Lewis', 'Hamilton', 2600)
-    (82, 'Asher', 'Mangel', 400)
-    (10, 'David', 'Coulthard', 1400)
-    (1, 'Max', 'Verstappen', 3000)
+    (55, 'Carlos', 'Sainz', 2000),
+    (44, 'Lewis', 'Hamilton', 2600),
+    (82, 'Asher', 'Mangel', 400),
+    (10, 'David', 'Coulthard', 1400),
+    (1, 'Max', 'Verstappen', 3000);
 
 -- Sample races
 INSERT INTO Race (race_id, date, track)
 VALUES
-    (1, '2025-3-16', 'Melbourne Grand Prix Circuit')
-    (3, '2024-3-24', 'Melbourne Grand Prix Circuit')
-    (12, '2024-7-7', 'Silverstone Circuit')
-    (50, '2024-12-20', 'K1 Speed Bellevue')
-    (2, '2025-3-23', 'Shanghai International Circuit')
+    (1, '2025-03-16', 'Melbourne Grand Prix Circuit'),
+    (3, '2024-03-23', 'Melbourne Grand Prix Circuit'),
+    (12, '2024-07-07', 'Silverstone Circuit'),
+    (50, '2024-12-20', 'K1 Speed Bellevue'),
+    (2, '2025-03-23', 'Shanghai International Circuit');
 
+-- Sample karts
+INSERT INTO Go_Kart (kart_num, class)
+VALUES
+    (55, 1),
+    (44, 1),
+    (82, 5),
+    (10, 2),
+    (1, 1);
+
+-- Sample bookings
+INSERT INTO Booking (booking_id, date, driver_id, race_id, kart_num)
+VALUES
+    (0, '2025-03-13', 1, 1, 1),
+    (1, '2024-03-20', 55, 3, 55),
+    (2, '2024-12-20', 82, 50, 82),
+    (3, '2024-07-04', 44, 12, 44),
+    (4, '2025-03-16', 1, 2, 1);
+
+-- Sample mechanics
+INSERT INTO Mechanic (mech_id, fname, lname)
+VALUES
+    (0, 'Frank', 'Williams'),
+    (1, 'Wesley', 'Proudlove'),
+    (2, 'Jos', 'Verstappen'),
+    (3, 'Kaj', 'Larsen'),
+    (4, 'Enzo', 'Ferrari');
+
+-- Sample maintenance
+INSERT INTO Maintenance (work_id, kart_num, mech_id, hours, date)
+VALUES
+    (0, 55, 0, 12, '2025-03-12'),
+    (1, 1, 2, 1, '2025-03-12'),
+    (2, 82, 1, 3, '2024-12-15'),
+    (3, 44, 4, 2, '2025-03-12'),
+    (4, 55, 4, 4, '2024-03-22');
+
+-- Sample race results
+INSERT INTO Race_Result (driver_id, race_id, start_pos, finish_pos)
+VALUES
+    (55, 3, 2, 1),
+    (44, 12, 2, 1),
+    (1, 1, 3, 2),
+    (44, 1, 8, 10),
+    (82, 50, 4, 2);
