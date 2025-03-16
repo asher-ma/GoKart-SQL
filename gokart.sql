@@ -65,6 +65,7 @@ CREATE TABLE Race_Result
 
 
 -- Sample data:
+-- Used data from formula1.com
 
 -- Sample drivers:
 INSERT INTO Driver (driver_id, fname, lname, rating)
@@ -128,3 +129,26 @@ VALUES
     (1, 1, 3, 2),
     (44, 1, 8, 10),
     (82, 50, 4, 2);
+
+
+-- Sample data queries
+SELECT * FROM Driver
+LIMIT 5;
+
+SELECT * FROM Race
+LIMIT 5;
+
+SELECT * FROM Go_Kart
+LIMIT 5;
+
+SELECT * FROM Booking
+LIMIT 5;
+
+SELECT * FROM Mechanic
+LIMIT 5;
+
+SELECT * FROM Maintenance
+LIMIT 5;
+
+SELECT * FROM Race_Result
+LIMIT 5;
