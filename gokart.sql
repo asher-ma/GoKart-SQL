@@ -41,34 +41,24 @@ CREATE TABLE Mechanic
         fname           VARCHAR(20) NOT NULL,
         lname           VARCHAR(20) NOT NULL)
 
--- Race Result weak entity
+-- Maintenance entity
 DROP TABLE Maintenance;
 CREATE TABLE Maintenance
-    (   work_id         INT,
+    (   work_id         INT PRIMARY KEY,
         kart_num        INT,
         mech_id         INT,
         hours           INT NOT NULL,
         date            TEXT NOT NULL,
-        PRIMARY KEY (work_id, kart_num, mech_id),
         FOREIGN KEY (kart_num) REFERENCES Go_Kart(kart_num),
         FOREIGN KEY (mech_id) REFERENCES Mechanic(mech_id))
 
 -- Race Result weak entity
 DROP TABLE Race_Result
 CREATE TABLE Race_Result
-    (   driver_id       INT
-        race_id         INT
+    (   driver_id       INT,
+        race_id         INT,
         start_pos       INT NOT NULL,
         finish_pos      INT NOT NULL,
         PRIMARY KEY (driver_id, race_id),
         FOREIGN KEY (driver_id) REFERENCES Driver(driver_id),
-        FOREIGN KEY (race_id) REFERENCES Driver(race_id))
-
-CREATE TABLE Race_Result
-    (   driver_id       INT
-        race_id         INT
-        start_pos       INT NOT NULL,
-        finish_pos      INT NOT NULL,
-        PRIMARY KEY (driver_id, race_id),
-        FOREIGN KEY (driver_id) REFERENCES Booking(driver_id),
-        FOREIGN KEY (race_id) REFERENCES Booking(race_id))
+        FOREIGN KEY (race_id) REFERENCES Race(race_id))
