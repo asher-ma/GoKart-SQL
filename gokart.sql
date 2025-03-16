@@ -62,3 +62,15 @@ CREATE TABLE Race_Result
         PRIMARY KEY (driver_id, race_id),
         FOREIGN KEY (driver_id) REFERENCES Driver(driver_id),
         FOREIGN KEY (race_id) REFERENCES Race(race_id))
+
+
+-- Sample data:
+
+-- Sample drivers:
+INSERT INTO Driver (driver_id, fname, lname, rating)
+VALUES
+    (55, 'Carlos', 'Sainz', 2000)
+    (44, 'Lewis', 'Hamilton', 2600)
+    (82, 'Asher', 'Mangel', 400)
+    (10, 'David', 'Coulthard', 1400)
+    (1, 'Max', 'Verstappen', 3000)
