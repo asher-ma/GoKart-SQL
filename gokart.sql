@@ -74,3 +74,13 @@ VALUES
     (82, 'Asher', 'Mangel', 400)
     (10, 'David', 'Coulthard', 1400)
     (1, 'Max', 'Verstappen', 3000)
+
+-- Sample races
+INSERT INTO Race (race_id, date, track)
+VALUES
+    (1, '2025-3-16', 'Melbourne Grand Prix Circuit')
+    (3, '2024-3-24', 'Melbourne Grand Prix Circuit')
+    (12, '2024-7-7', 'Silverstone Circuit')
+    (50, '2024-12-20', 'K1 Speed Bellevue')
+    (2, '2025-3-23', 'Shanghai International Circuit')
+
