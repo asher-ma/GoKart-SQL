@@ -151,7 +151,6 @@ I tried to use \G to better space out the columns but it just made every entry
 take up a lot of space and this way is printing them including headers anyway
 */
 
-/*
 SELECT *
 FROM Driver
 LIMIT 5;
@@ -179,7 +178,6 @@ LIMIT 5;
 SELECT *
 FROM Race_Result
 LIMIT 5;
-*/
 
 
 -- Sample transactions
